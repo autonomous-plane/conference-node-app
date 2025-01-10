@@ -2,9 +2,9 @@ const http = require('http');
 const si = require('systeminformation');
 const express = require('express');
 const _ = require('lodash');
+//Importing intentionally vulnerable versions of the 'systeminformation' and 'lodash' libraries
 
 var server = express();
-
 
 server.get('/lodash', (req, res) => {
   res.json(_.capitalize('not vulnerable...'));
@@ -39,4 +39,4 @@ server.get('/ping', (req, res) => {
  
 });
   
-server.listen(1300, () => console.log('CNCF SecurityCon Demo App (port=1300)...'))
+server.listen(1300, () => console.log('Conference Node.js Demo App (port=1300)...'))
